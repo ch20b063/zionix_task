@@ -8,12 +8,20 @@ Clone the Repository
 **bash**
 cd zionix_task
 
-Now open both frontend(port=4000) and backend(port=3000)
+Now open both frontend(port=4000) and backend(port=3000) in vscode
+
+
 **Install Dependencies**
 
 Using NPM:
+
+
 "npm install"
 
 And Run
+
+
 for Frontend = "npm run dev"
+
+
 for backend="npm start"
