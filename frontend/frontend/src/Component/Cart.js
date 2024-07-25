@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Cart = ({ cartItems, updateVolume, removeFromCart }) => (
@@ -26,13 +25,18 @@ const Cart = ({ cartItems, updateVolume, removeFromCart }) => (
               <input
                 type="number"
                 value={item.volume}
-                onChange={(e) => updateVolume(index, e.target.value)}
+                onChange={(e) => updateVolume(index, parseInt(e.target.value))}
               />
             </td>
             <td>{item.unitPrice}</td>
-            <td>{item.totalPrice}</td>
+            <td>{(item.unitPrice * item.volume)}</td>
             <td>
-              <button onClick={() => removeFromCart(index)}>Remove</button>
+              <button
+                style={{ width: '100%' }}
+                onClick={() => removeFromCart(index)}
+              >
+                Remove
+              </button>
             </td>
           </tr>
         ))}
